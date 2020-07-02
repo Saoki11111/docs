@@ -1,0 +1,172 @@
+<!-- # emmet(vim) -->
+<!-- Recent: a href="https://qiita.com/muran001/items/9ce24525b3285678acc3" -->
+
+<!-- tag 名のみ 閉じ括弧のプラグイン不要？ -->
+<!-- ## key = c-t & , -->
+<!-- 要素名そのまま -->
+<!-- 
+  div<key>
+  span<key>
+-->
+<div><span></span></div>
+
+<!-- href(属性) も出る -->
+<a href=""></a>
+
+<!-- ## 子タグ -->
+<!--
+  ul>li<key>
+-->
+<ul>
+  <li></li>
+</ul>
+
+<!-- ## #=id, .=class (セレクタの補完) -->
+<!--
+  div#1.2
+-->
+<!--
+  div
+  #=id=""(属性)
+  ID名=1
+  .=class=""(属性)
+  class名=2
+-->
+<div id="1" class="2"></div>
+
+<!-- li の補完 -->
+<!-- ul>.item*5 -->
+<ul>
+  <li class="item"></li>
+  <li class="item"></li>
+  <li class="item"></li>
+  <li class="item"></li>
+  <li class="item"></li>
+</ul>
+<!-- 表の補完 -->
+table>.row*2>.col*4
+<table>
+  <tr class="row">
+    <td class="col"></td>
+    <td class="col"></td>
+    <td class="col"></td>
+    <td class="col"></td>
+  </tr>
+  <tr class="row">
+    <td class="col"></td>
+    <td class="col"></td>
+    <td class="col"></td>
+    <td class="col"></td>
+  </tr>
+</table>
+
+<!-- id, class 以外の属性 -->
+<!-- a[title="My Site"] -->
+<a href="" title="My Site"></a>
+
+<!-- id, class 以外の属性(複数) -->
+<div data-id="5" title="My Site"></div>
+
+<!-- 要素内のテキストを記述 -->
+<!-- p{hello} -->
+<p>hello</p>
+
+<!-- ## タグを複数 -->
+<!--
+  div*3
+-->
+<!--
+  div
+  *=直前のタグをn回
+-->
+<div></div>
+<div></div>
+<div></div>
+
+<!-- ## 繰り返しタグ&連番  -->
+<!--
+  ul>li.item$*3
+-->
+<!--
+  ul>li
+  .=class=""
+  class名=(なしなら数字j)
+  $=連番
+  *=繰り返し
+-->
+<div>
+  <li class="1"></li>
+  <li class="2"></li>
+  <li class="3"></li>
+</div>
+<!-- 繰り返しを3から始める -->
+<!-- div.item$@3*5 -->
+<div class="item3"></div>
+<div class="item4"></div>
+<div class="item5"></div>
+<div class="item6"></div>
+<div class="item7"></div>
+
+<!-- 同階層に class を展開 -->
+<!-- main>section*3+div.btn -->
+<main>
+  <section></section>
+  <section></section>
+  <section></section>
+  <div class="btn"></div>
+</main>
+
+<!-- ひとつ上の階層 -->
+<!-- main>section*3^footer -->
+<main>
+  <section></section>
+  <section></section>
+  <section></section>
+</main>
+<footer></footer>
+
+<!-- listを()を使って分かりやすく -->
+<!-- (ul>li*3)*2 -->
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<!-- form タグ -->
+<!-- form:post -->
+<form action="" method="post"></form>
+
+<!-- input:t -->
+<input id="" type="text" name="">
+
+<!-- input:r ラジオボタン -->
+<input id="" type="radio" name="">
+
+<!-- checkbox -->
+<!-- input:c -->
+<input id="" type="checkbox" name="">
+
+<!-- select タグ -->
+<!-- select>[value="item$"]*5 -->
+<select id="" name="">
+  <option value="item1"></option>
+  <option value="item2"></option>
+  <option value="item3"></option>
+  <option value="item4"></option>
+  <option value="item5"></option>
+</select>
+
+<!-- ダミー文章 -->
+<!-- lorem -->
+<p>Consectetur quae at quam cum quibusdam Consectetur id ad distinctio facilis mollitia, iure, tenetur suscipit recusandae? Laudantium maiores praesentium hic nisi nam Ipsam sint nesciunt illum enim autem. Sunt velit!</p>
+
+<!-- 大体いけそう -->
+<img src="" alt="">
+
+<!-- 自分用のカスタマイズもいけそう -->
